@@ -62,8 +62,11 @@ public class KPO22 {
             sc = new Scanner(f, "UTF-8");
             strList = new ArrayList<>();
             String readStr;
+            //Пока есть, что считывать
             while (sc.hasNextLine()) {
+                //Считываем построчно
                 readStr = sc.nextLine();
+                //Редактируем прочитанную строку
                 strList.add(readStr.replaceAll("public", "private"));
             }
         } catch (FileNotFoundException ex) {
@@ -72,6 +75,7 @@ public class KPO22 {
             if (sc != null) {
                 sc.close();
             }
+            //Возвращаем результат
             return strList;
         }
     }
