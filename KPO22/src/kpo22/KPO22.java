@@ -22,14 +22,22 @@ import java.util.logging.Logger;
  */
 public class KPO22 {
 
+    /**
+     * Приложение, позволяющее прочитать текст Java-программы и все слова public
+     * в объявлении атрибутов и методов класса заменить на слово private
+     * @param args
+     * @throws FileNotFoundException
+     */
     public static void main(String[] args) throws FileNotFoundException {
-
+        //Инициализацмя файла
         File file = new File("KPO22Text.txt");
-        Scanner reader = new Scanner(file, "UTF-8");
-        ArrayList<String> content = contentEdit(reader);
+        //Чтение и преобразование данных из файла
+        ArrayList<String> content = contentEdit(file);
         PrintWriter pWriter = null;
         try {
+            //Очистка файла
             pWriter = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+            //Запись новых данных в файл
             for (String str : content) {
                 pWriter.println(str);
             }
@@ -39,19 +47,32 @@ public class KPO22 {
             if (pWriter != null) {
                 pWriter.close();
             }
-            if (reader != null) {
-                reader.close();
-            }
         }
     }
 
-    public static ArrayList<String> contentEdit(Scanner sc) {
-        ArrayList<String> strList = new ArrayList<>();
-        String readStr;
-        while (sc.hasNextLine()) {
-            readStr = sc.nextLine();
-            strList.add(readStr.replaceAll("public", "private"));
+    /**
+     * Функция Читает содержимое файла, запоминает и изменяет согласно условиям задачи
+     * @param f На вход подается файл
+     * @return Возвращает лист с измененным содержанием
+     */
+    public static ArrayList<String> contentEdit(File f) {
+        Scanner sc = null;
+        ArrayList<String> strList = null;
+        try {
+            sc = new Scanner(f, "UTF-8");
+            strList = new ArrayList<>();
+            String readStr;
+            while (sc.hasNextLine()) {
+                readStr = sc.nextLine();
+                strList.add(readStr.replaceAll("public", "private"));
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(KPO22.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (sc != null) {
+                sc.close();
+            }
+            return strList;
         }
-        return strList;
     }
 }
