@@ -17,17 +17,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Приложение, позволяющее прочитать текст Java-программы и все слова public в
+ * объявлении атрибутов и методов класса заменить на слово private
  *
  * @author Qngdjas
  */
 public class KPO22 {
 
-    /**
-     * Приложение, позволяющее прочитать текст Java-программы и все слова public
-     * в объявлении атрибутов и методов класса заменить на слово private
-     * @param args
-     * @throws FileNotFoundException
-     */
     public static void main(String[] args) throws FileNotFoundException {
         //Инициализацмя файла
         File file = new File("KPO22Text.txt");
@@ -51,7 +47,9 @@ public class KPO22 {
     }
 
     /**
-     * Функция Читает содержимое файла, запоминает и изменяет согласно условиям задачи
+     * Функция Читает содержимое файла, запоминает и изменяет согласно условиям
+     * задачи
+     *
      * @param f На вход подается файл
      * @return Возвращает лист с измененным содержанием
      */
