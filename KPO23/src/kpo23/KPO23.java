@@ -13,14 +13,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Консольное приложение, позволяющее считать квадратную матрицу из файла,
+ * вывести её на экран и транспонировать
  *
  * @author Qngdjas
  */
 public class KPO23 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         //Инициализация файла
         File file = new File("KPO23Text.txt");
@@ -36,6 +35,7 @@ public class KPO23 {
 
     /**
      * Метод вывода матрицы на экран
+     *
      * @param matrix
      */
     public static void matrixOutput(int[][] matrix) {
@@ -51,6 +51,7 @@ public class KPO23 {
 
     /**
      * Метод транспонирования матрицы
+     *
      * @param matrix На вход подается матрица
      * @return Возвращает транспонированную матрицу
      */
@@ -68,6 +69,7 @@ public class KPO23 {
 
     /**
      * Метод определения размера массива
+     *
      * @param f На вход подается файл
      * @return Возвращает количество строк в файле
      */
@@ -98,6 +100,7 @@ public class KPO23 {
 
     /**
      * Метод чтения матрицы из файла
+     *
      * @param file На вход подается файл
      * @param matrixLength И размер матрицы в этом файле
      * @return Возвращает масссив из файла
