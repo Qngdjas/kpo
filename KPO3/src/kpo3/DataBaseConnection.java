@@ -16,6 +16,13 @@ import java.sql.SQLException;
  */
 public class DataBaseConnection {
 
+    /**
+     * Соединение с БД
+     *
+     * @return
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public static Connection link() throws ClassNotFoundException, SQLException {
         System.out.println("Регистрация JDBC драйвера");
         Class.forName(KPO3.JDBC_DRIVER);
