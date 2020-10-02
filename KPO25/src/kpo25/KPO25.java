@@ -18,6 +18,7 @@ public class KPO25 {
     public static void main(String[] args) {
         //Ввод данных с консоли
         String[] input = inputString().split(" ");
+        highestConsistency(input);
     }
 
     /**
