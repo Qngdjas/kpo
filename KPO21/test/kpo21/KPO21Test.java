@@ -30,7 +30,7 @@ public class KPO21Test {
     }
 
     /**
-     * Test of check method, of class KPO21.
+     * Тест комбинаций пустой строки
      */
     @Test
     public void testCheckVoidString() {
@@ -39,7 +39,7 @@ public class KPO21Test {
     }
 
     /**
-     * Test of check method, of class KPO21.
+     * Тест комбинаций из 1 слова
      */
     @Test
     public void testCheckOneWordString() {
@@ -48,7 +48,7 @@ public class KPO21Test {
     }
 
     /**
-     * Test of check method, of class KPO21.
+     * Тест комбинаций из 2 слов
      */
     @Test
     public void testCheckTwoWordsString() {
@@ -57,16 +57,24 @@ public class KPO21Test {
     }
 
     /**
-     * Test of check method, of class KPO21.
+     * Тест комбинаций из трех слов
      */
     @Test
     public void testCheckThreeWordsString() {
         KPO21.check("abs sb bc");
         assertEquals("abs sb\nsb bc\n", outContent.toString());
     }
+    /**
+     * Тест, что строка со словами без комбинаций даст нам пустой ответ
+     */
+    @Test
+    public void testCheckNoCombinationWordsString() {
+        KPO21.check("abs bb kc");
+        assertEquals("", outContent.toString());
+    }
 
     /**
-     * Test of check method, of class KPO21.
+     * Тест, что строка с комбинациями из 3 слов не даст нам пустого ответа
      */
     @Test
     public void testCheckThreeWordsStringNotVoid() {
@@ -74,7 +82,7 @@ public class KPO21Test {
         assertNotEquals("", outContent.toString());
     }
     /**
-     * Test of check method, of class KPO21.
+     * Тест, что строка с комбинациями из 2 слов не даст нам пустого ответа
      */
     @Test
     public void testCheckTwoWordsNotVoid() {
@@ -82,7 +90,7 @@ public class KPO21Test {
         assertNotEquals("", outContent.toString());
     }
     /**
-     * Test of check method, of class KPO21.
+     * Тест, что строка с комбинациями из 4 слов не даст нам пустого ответа
      */
     @Test
     public void testCheckFourWordsNotNull() {
@@ -90,7 +98,7 @@ public class KPO21Test {
         assertNotEquals("", outContent.toString());
     }
     /**
-     * Test of check method, of class KPO21.
+     * Тест, что пустая строка не выведет нам какого либо ответа
      */
     @Test
     public void testCheckVoidStringHadNoContent() {
