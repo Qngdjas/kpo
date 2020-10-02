@@ -33,7 +33,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck1() {
+    public void testCheckVoidString() {
         KPO21.check("");
         assertEquals("", outContent.toString());
     }
@@ -42,7 +42,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck2() {
+    public void testCheckOneWordString() {
         KPO21.check("abs");
         assertEquals("", outContent.toString());
     }
@@ -51,7 +51,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck3() {
+    public void testCheckTwoWordsString() {
         KPO21.check("abs sv");
         assertEquals("abs sv\n", outContent.toString());
     }
@@ -60,7 +60,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck4() {
+    public void testCheckThreeWordsString() {
         KPO21.check("abs sb bc");
         assertEquals("abs sb\nsb bc\n", outContent.toString());
     }
@@ -69,7 +69,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck5() {
+    public void testCheckThreeWordsStringNotVoid() {
         KPO21.check("abs sb bc");
         assertNotEquals("", outContent.toString());
     }
@@ -77,7 +77,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck6() {
+    public void testCheckTwoWordsNotVoid() {
         KPO21.check("abs sb");
         assertNotEquals("", outContent.toString());
     }
@@ -85,7 +85,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck7() {
+    public void testCheckFourWordsNotNull() {
         KPO21.check("asbb ajb sab dsda");
         assertNotEquals("", outContent.toString());
     }
@@ -93,7 +93,7 @@ public class KPO21Test {
      * Test of check method, of class KPO21.
      */
     @Test
-    public void testCheck8() {
+    public void testCheckVoidStringHadNoContent() {
         KPO21.check("");
         assertNotEquals("abs sv", outContent.toString());
     }
