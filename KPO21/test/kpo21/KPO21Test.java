@@ -29,6 +29,7 @@ public class KPO21Test {
         System.setErr(new PrintStream(errContent));
     }
 
+    //Группа тестов метода check(String str)
     /**
      * Тест комбинаций пустой строки
      */
