@@ -37,8 +37,7 @@ public class KPO21Test {
      */
     @Test
     public void testCheck1() {
-        KPO21 lab21 = new KPO21();
-        lab21.check("");
+        KPO21.check("");
         assertEquals("", outContent.toString());
     }
 
@@ -47,8 +46,7 @@ public class KPO21Test {
      */
     @Test
     public void testCheck2() {
-        KPO21 lab21 = new KPO21();
-        lab21.check("abs");
+        KPO21.check("abs");
         assertEquals("", outContent.toString());
     }
 
@@ -57,8 +55,7 @@ public class KPO21Test {
      */
     @Test
     public void testCheck3() {
-        KPO21 lab21 = new KPO21();
-        lab21.check("abs sv");
+        KPO21.check("abs sv");
         assertEquals("abs sv\n", outContent.toString());
     }
 
@@ -67,8 +64,7 @@ public class KPO21Test {
      */
     @Test
     public void testCheck4() {
-        KPO21 lab21 = new KPO21();
-        lab21.check("abs sb bc");
+        KPO21.check("abs sb bc");
         assertEquals("abs sb\nsb bc\n", outContent.toString());
     }
 
