@@ -84,6 +84,7 @@ public class KPO23 {
             }
         } catch (IOException ex) {
             Logger.getLogger(KPO23.class.getName()).log(Level.SEVERE, null, ex);
+            lines = -1;
         } finally {
             if (br != null) {
                 try {
