@@ -29,20 +29,13 @@ public class KPO22 {
         File file = new File("KPO22Text.txt");
         //Чтение и преобразование данных из файла
         ArrayList<String> content = contentEdit(file);
-        PrintWriter pWriter = null;
-        try {
-            //Очистка файла
-            pWriter = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+        try (PrintWriter pWriter = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             //Запись новых данных в файл
-            for (String str : content) {
+            content.forEach((str) -> {
                 pWriter.println(str);
-            }
+            });
         } catch (IOException ex) {
             Logger.getLogger(KPO22.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (pWriter != null) {
-                pWriter.close();
-            }
         }
     }
 
@@ -74,7 +67,8 @@ public class KPO22 {
                 sc.close();
             }
             //Возвращаем результат
-            return strList;
+
         }
+        return strList;
     }
 }
