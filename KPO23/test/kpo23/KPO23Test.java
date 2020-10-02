@@ -100,6 +100,17 @@ public class KPO23Test {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Тест, что программа правильно считывает длину из файла с матрицей
+     */
+    @Test
+    public void testMatrixFileSize() {
+        File f = new File("KPO23Text.txt");
+        int expResult = 6;
+        int result = KPO23.matrixSize(f);
+        assertEquals(expResult, result);
+    }
+
     //Набор тестов чтения из файла с правильным выводом значений
     /**
      * Тест верного чтения из файла
