@@ -22,6 +22,7 @@ import java.util.logging.Logger;
  * @author Qngdjas
  */
 public class KPO24 {
+
     //Шаблон
     static String pattern = "солнце";
 
@@ -40,12 +41,16 @@ public class KPO24 {
         }
         //Деление текста на слова
         String[] words = text.split("\\s");
+        for (String str : words) {
+            System.out.println(str);
+        }
         //Ищем нужные слова и выводим в файл
         searchPattern(words, in);
     }
 
     /**
      * Метод перевода текста из файла в список
+     *
      * @param f На вход подается файл
      * @return Возвращает содержимое файла в виде листа
      */
@@ -70,6 +75,7 @@ public class KPO24 {
 
     /**
      * Метод поиска слова по шаблону
+     *
      * @param data На вход подается слова для проверки с шаблоном
      * @param f И файл
      */
