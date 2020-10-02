@@ -65,6 +65,39 @@ public class KPO21Test {
         assertEquals("abs sb\nsb bc\n", outContent.toString());
     }
 
+    /**
+     * Test of check method, of class KPO21.
+     */
+    @Test
+    public void testCheck5() {
+        KPO21.check("abs sb bc");
+        assertNotEquals("", outContent.toString());
+    }
+    /**
+     * Test of check method, of class KPO21.
+     */
+    @Test
+    public void testCheck6() {
+        KPO21.check("abs sb");
+        assertNotEquals("", outContent.toString());
+    }
+    /**
+     * Test of check method, of class KPO21.
+     */
+    @Test
+    public void testCheck7() {
+        KPO21.check("asbb ajb sab dsda");
+        assertNotEquals("", outContent.toString());
+    }
+    /**
+     * Test of check method, of class KPO21.
+     */
+    @Test
+    public void testCheck8() {
+        KPO21.check("");
+        assertNotEquals("abs sv", outContent.toString());
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(originalOut);
