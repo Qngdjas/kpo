@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<timetable>
+    <teacher>
+        <idTeacher>1</idTeacher>
+        <fullName>Ivanov Ivan Ivanovich</fullName>
+        <subjects>
+            <name>Math</name>
+            <day>Monday</day>
+            <classroom>A309</classroom>
+        </subjects>
+        <hours>2</hours>
+        <students>12</students>
+    </teacher>
+    <teacher>
+        <idTeacher>2</idTeacher>
+        <fullName>Pupkin Vasilij Vasilievich</fullName>
+        <subjects>
+            <name>Biology</name>
+            <day>Friday</day>
+            <classroom>A208</classroom>
+        </subjects>
+        <hours>4</hours>
+        <students>15</students>
+    </teacher>
+    <teacher>
+        <idTeacher>3</idTeacher>
+        <fullName>Petrov Petr Petrovich</fullName>
+        <subjects>
+            <name>Chemistry</name>
+            <day>Tuesday</day>
+            <classroom>D202</classroom>
+        </subjects>
+        <hours>2</hours>
+        <students>13</students>
+    </teacher>
+</timetable>
