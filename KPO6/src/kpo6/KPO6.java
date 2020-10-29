@@ -42,5 +42,4 @@ public class KPO6 {
         }
         System.out.println(res);
     }
-
 }
