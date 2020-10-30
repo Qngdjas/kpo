@@ -22,16 +22,17 @@ public class MarshalMain {
             JAXBContext context = JAXBContext.newInstance(Teachers.class);
             Marshaller m = context.createMarshaller();
             Teachers st = new Teachers() { // анонимный класс для добавления студентов
-                {   // добавление первого студента
+                {   // добавление первого учителя
                     Teacher.Subjects sub = new Teacher.Subjects("music", "Wednesday", "A505");
                     Teacher s = new Teacher("3", "Kuropatkin Arnold Viktorovich", sub, "6", "18");
                     this.add(s);
-                    // добавление второго студента
+                    // добавление второго учителя
                     sub = new Teacher.Subjects("english", "Tuesday", "B101");
                     s = new Teacher("4", "Bukin Gennadiy", sub, "3", "14");
                     this.add(s);
                 }
             };
+            // Маршаллинг в файл
             m.marshal(st, new FileOutputStream("src/kpo62/TimetableDatabseByMarshalling.xml"));
             // копия на консоль
             m.marshal(st, System.out);
