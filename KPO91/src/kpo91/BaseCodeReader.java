@@ -16,17 +16,14 @@ public class BaseCodeReader {
     private boolean syntactic;
     private boolean lexical;
 
+    //Получение пути файла
     public BaseCodeReader(String path) {
         this.path = path;
     }
 
+    //Чтение файла
     public void readFile() {
         file = "файл по пути - \"" + path + "\"";
         System.out.println("I’m BaseCodeReader, I’ve done getFile");
-    }
-
-    @Override
-    public String toString() {
-        return file;
     }
 }

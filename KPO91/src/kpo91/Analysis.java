@@ -11,11 +11,13 @@ package kpo91;
  */
 public class Analysis {
 
+    //Синтаксический анализ кода
     public static boolean syntaxAnalyser(String code) {
         System.out.println("I’m Analysis, I’ve done syntaxAnalyser");
         return true;
     }
 
+    //Лексический анализ кода
     public static boolean lexicalAnalyser(String code) {
         System.out.println("I’m Analysis, I’ve done lexicalAnalyser");
         return true;

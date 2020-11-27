@@ -15,10 +15,13 @@ public class KPO91 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Путь к файлу
         String path = "таков путь";
         BaseCodeReader reader = new BaseCodeReader(path);
+        //Чтение файла
         reader.readFile();
+        //Преобразование файла
         Conversation.codeConversation(BaseCodeReader.file);
     }
-    
+
 }

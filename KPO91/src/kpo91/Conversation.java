@@ -11,11 +11,16 @@ package kpo91;
  */
 public class Conversation {
 
-    public static void codeConversation(String code) {
+    //ѕреобразование кода в машинный
+    public static String codeConversation(String code) {
+        //≈сли анализ кода прошел успешно, то выполнн€ем преобразование
         if (Analysis.syntaxAnalyser(code) && Analysis.lexicalAnalyser(code)) {
             System.out.println("IТm Conversation, IТve done codeConversation");
+            return code;
+        //»наче сообщение об ошибке преобразовани€
         } else {
             System.out.println("IТm Conversation, IТve not done codeConversation");
+            return null;
         }
     }
 }
