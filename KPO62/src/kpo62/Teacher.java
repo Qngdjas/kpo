@@ -84,7 +84,7 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "\nTeacher = [idTeacher = " + idTeacher + ", fullName = " + fullName + ", subjects = " + subjects + ", hours = " + hours + ", students = " + students + "]";
+        return "\n  Teacher = [idTeacher = " + idTeacher + ", fullName = " + fullName + ", subjects = " + subjects + ", hours = " + hours + ", students = " + students + "]";
     }
 
     @XmlRootElement
